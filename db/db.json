@@ -1,14 +1,34 @@
 {
-  "usuarios": [
+  "quadrinhos": [
     {
       "id": 1,
-      "nome": "Ana Souza",
-      "email": "ana@example.com"
+      "titulo": "Batman: Ano Um",
+      "ano": 1987,
+      "autor": "Frank Miller",
+      "editora": "DC Comics",
+      "personagens": "Batman, Jim Gordon, Selina Kyle",
+      "descricao": "A origem definitiva do Cavaleiro das Trevas, mostrando o primeiro ano de Bruce Wayne como Batman e o início da corrupção em Gotham City.",
+      "imagem": "ano-um.jpg"
     },
     {
       "id": 2,
-      "nome": "Bruno Lima",
-      "email": "bruno@example.com"
+      "titulo": "Batman: O Cavaleiro das Trevas",
+      "ano": 1986,
+      "autor": "Frank Miller",
+      "editora": "DC Comics",
+      "personagens": "Batman, Coringa, Superman",
+      "descricao": "Uma história sombria e madura sobre um Bruce Wayne envelhecido que retorna à ativa para salvar Gotham de uma nova onda de crime.",
+      "imagem": "cavaleiro-das-trevas.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Batman: A Piada Mortal",
+      "ano": 1988,
+      "autor": "Alan Moore",
+      "editora": "DC Comics",
+      "personagens": "Batman, Coringa, Barbara Gordon, Comissário Gordon",
+      "descricao": "Uma das histórias mais icônicas do Batman, explorando a origem do Coringa e sua tentativa de enlouquecer o Comissário Gordon.",
+      "imagem": "piada-mortal.jpg"
     }
   ]
 }

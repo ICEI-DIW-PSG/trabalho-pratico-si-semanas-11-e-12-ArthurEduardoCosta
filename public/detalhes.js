@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const id = parseInt(params.get("id"));
+  const API_URL = "http://localhost:3000/quadrinhos";
+
 
   fetch("quadrinhos.json")
     .then(res => res.json())

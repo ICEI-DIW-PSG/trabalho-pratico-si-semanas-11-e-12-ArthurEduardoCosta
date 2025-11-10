@@ -2,33 +2,156 @@
   "quadrinhos": [
     {
       "id": 1,
-      "titulo": "Batman: Ano Um",
-      "ano": 1987,
-      "autor": "Frank Miller",
+      "titulo": "Batman: A Piada Mortal",
+      "ano": 1988,
+      "autor": "Alan Moore, Brian Bolland",
       "editora": "DC Comics",
-      "personagens": "Batman, Jim Gordon, Selina Kyle",
-      "descricao": "A origem definitiva do Cavaleiro das Trevas, mostrando o primeiro ano de Bruce Wayne como Batman e o início da corrupção em Gotham City.",
-      "imagem": "ano-um.jpg"
+      "personagens": "Batman, Coringa, Barbara Gordon",
+      "descricao": "A sombria origem do Coringa — uma das histórias mais intensas e psicológicas do Batman.",
+      "imagem": "piada-mortal-vitrine.jpg",
+      "fotos": [
+        "piada-mortal-1.jpg",
+        "piada-mortal-2.jpg",
+        "piada-mortal-3.jpg"
+      ]
     },
     {
       "id": 2,
-      "titulo": "Batman: O Cavaleiro das Trevas",
+      "titulo": "O Cavaleiro das Trevas",
       "ano": 1986,
       "autor": "Frank Miller",
       "editora": "DC Comics",
-      "personagens": "Batman, Coringa, Superman",
-      "descricao": "Uma história sombria e madura sobre um Bruce Wayne envelhecido que retorna à ativa para salvar Gotham de uma nova onda de crime.",
-      "imagem": "cavaleiro-das-trevas.jpg"
+      "personagens": "Batman, Robin, Superman, Comissário Gordon",
+      "descricao": "Batman volta da aposentadoria para enfrentar um mundo em ruínas e um Superman a serviço do governo.",
+      "imagem": "capa_cavaleiro-das-trevas.jpg",
+      "fotos": [
+        "cavaleiro-das-trevas-1.jpg",
+        "cavaleiro-das-trevas-2.jpg",
+        "cavaleiro-das-trevas-3.jpg"
+      ]
     },
     {
       "id": 3,
-      "titulo": "Batman: A Piada Mortal",
-      "ano": 1988,
-      "autor": "Alan Moore",
+      "titulo": "Batman: Silêncio",
+      "ano": 2002,
+      "autor": "Jeph Loeb, Jim Lee",
       "editora": "DC Comics",
-      "personagens": "Batman, Coringa, Barbara Gordon, Comissário Gordon",
-      "descricao": "Uma das histórias mais icônicas do Batman, explorando a origem do Coringa e sua tentativa de enlouquecer o Comissário Gordon.",
-      "imagem": "piada-mortal.jpg"
+      "personagens": "Batman, Mulher-Gato, Coringa, Hush",
+      "descricao": "Mistério e traição marcam a chegada de Hush, um novo inimigo de Gotham que conhece todos os segredos de Bruce Wayne.",
+      "imagem": "batman hush.jpg",
+      "fotos": [
+        "hush-1.jpg",
+        "hush-2.jpg",
+        "hush-3.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "Watchmen",
+      "ano": 1986,
+      "autor": "Alan Moore, Dave Gibbons",
+      "editora": "DC Comics",
+      "personagens": "Rorschach, Doutor Manhattan, Espectral, Ozymandias",
+      "descricao": "Heróis questionam a moral e o poder — uma história que redefiniu o conceito de super-heróis nos quadrinhos.",
+      "imagem": "Watchmen.jpg",
+      "fotos": [
+        "watchmen-1.jpg",
+        "watchmen-2.jpg",
+        "watchmen-3.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "Batman: Ano Um",
+      "ano": 1987,
+      "autor": "Frank Miller, David Mazzucchelli",
+      "editora": "DC Comics",
+      "personagens": "Batman, Selina Kyle, Comissário Gordon",
+      "descricao": "A origem definitiva do Cavaleiro das Trevas e sua primeira luta contra o crime em Gotham City.",
+      "imagem": "batman-ano-um.jpg",
+      "fotos": [
+        "ano-um-1.jpg",
+        "ano-um-2.jpg",
+        "ano-um-3.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "titulo": "Flashpoint",
+      "ano": 2011,
+      "autor": "Geoff Johns, Andy Kubert",
+      "editora": "DC Comics",
+      "personagens": "Flash, Batman (Thomas Wayne), Aquaman, Mulher-Maravilha",
+      "descricao": "Barry Allen altera a linha do tempo e cria uma realidade onde Thomas Wayne é o Batman. Um ponto de virada no universo DC.",
+      "imagem": "flash_flashpoint_quadrinho_conheca__64b6520m8.jpg",
+      "fotos": [
+        "flashpoint-1.jpg",
+        "flashpoint-2.jpg",
+        "flashpoint-3.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "titulo": "Justice",
+      "ano": 2005,
+      "autor": "Alex Ross, Jim Krueger",
+      "editora": "DC Comics",
+      "personagens": "Liga da Justiça, Lex Luthor, Brainiac",
+      "descricao": "Vilões se unem para “salvar” o mundo, mas nada é o que parece nesta obra visualmente impressionante de Alex Ross.",
+      "imagem": "justice_dc_capa.jpg",
+      "fotos": [
+        "justice-1.jpg",
+        "justice-2.jpg",
+        "justice-3.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "titulo": "batman vitória sombria",
+      "ano": "1996",  
+      "autor": "Jeph Loeb, Tim Sale",
+      "editora": "DC Comics",
+      "personagens": "Batman, Robin, Jim Gordon, Mulher gato, Duas Caras",
+      "descricao": "É uma história em quadrinhos que mistura mistério, crime e a origem do primeiro Robin, Dick Grayson",
+      "imagem": "batman-vitoria-sombria.jpg",
+      "fotos": [
+        "batman-vitoria-sombria.jpg",
+        "batman-vitoria-sombria.jpg",
+        "batman-vitoria-sombria.jpg"
+        
+        
+        
+      ]
+    },
+    {
+      "id": 9,
+      "titulo": "Crise nas Infinitas Terras",
+      "ano": 1985,
+      "autor": "Marv Wolfman, George Pérez",
+      "editora": "DC Comics",
+      "personagens": "Superman, Flash, Mulher-Maravilha, Batman",
+      "descricao": "Um evento épico que redefiniu o multiverso da DC, unindo realidades e encerrando linhas do tempo antigas.",
+      "imagem": "crise-infinitas-terras.jpg",
+      "fotos": [
+        "crise-1.jpg",
+        "crise-2.jpg",
+        "crise-3.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "titulo": "Superman Red Son",
+      "ano": 2001,
+      "autor": "Mark Millar, Dave Johson",
+      "editora":"DC Comics",
+      "personagens": "Superman, Lex Luthor, Batman, Mulher maravilha",
+      "descricao": "E se o Superman tivesse caído na União Soviética em vez dos Estados Unidos? Uma visão alternativa do icônico herói.",
+      "imagem": "Superman-Red-Son.jpg",
+      "fotos": [
+        "Superman-Red-Son.jpg",
+        "superman-red-son-2.jpg",
+        "superman-red-son-3.jpg"
+      ]
     }
   ]
 }

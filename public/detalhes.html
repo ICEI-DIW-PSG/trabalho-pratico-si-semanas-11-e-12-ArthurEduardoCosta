@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-dark text-light">
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning sticky-top">
@@ -26,108 +26,80 @@
   </nav>
 
   <!-- SEÇÃO DETALHES -->
-  <section class="container my-5">
-    <div class="row align-items-center">
-      <!-- Imagem principal -->
-      <div class="col-md-5 text-center">
-        <img id="imgQuadrinho" class="img-fluid rounded shadow-lg border border-warning" alt="Capa do Quadrinho">
-      </div>
-
-      <!-- Informações -->
-      <div class="col-md-7">
-        <h1 id="tituloQuadrinho" class="text-warning mb-3"></h1>
-        <p id="descricaoQuadrinho" class="lead"></p>
-        <ul class="list-group list-group-flush bg-transparent">
-          <li class="list-group-item bg-transparent text-light border-warning"> <strong>Ano:</strong> <span id="anoQuadrinho"></span></li>
-          <li class="list-group-item bg-transparent text-light border-warning"> <strong>Autor:</strong> <span id="autorQuadrinho"></span></li>
-          <li class="list-group-item bg-transparent text-light border-warning"> <strong>Arte:</strong> <span id="arteQuadrinho"></span></li>
-          <li class="list-group-item bg-transparent text-light border-warning"> <strong>Local:</strong> <span id="localQuadrinho"></span></li>
-          <li class="list-group-item bg-transparent text-light border-warning"> <strong>Vilão:</strong> <span id="vilaoQuadrinho"></span></li>
-        </ul>
-        <a href="index.html" class="btn btn-warning mt-4">⬅ Voltar à Home</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALERIA SECUNDÁRIA -->
-  <section class="container my-5">
-    <h2 class="text-warning text-center mb-4">Fotos do Quadrinho</h2>
-    <div class="row g-4" id="fotosQuadrinho">
-     
-    </div>
+  <section class="container my-5" id="conteudo">
+    <div class="text-center text-warning">Carregando detalhes...</div>
   </section>
 
   <!-- RODAPÉ -->
   <footer class="text-center py-4 bg-dark text-secondary border-top border-warning">
-    <p> Feito por um fã que apenas quer tirar uma nota boa no trabalho— DC Comics © 2025 | Tema: Quadrinhos da DC</p>
+    <p>Feito por um fã que apenas quer tirar uma nota boa no trabalho — DC Comics © 2025</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Script dinâmico -->
   <script>
-    
-    const quadrinhos = [
-      { titulo: "Batman: A Piada Mortal", descricao: "A sombria origem do Coringa — uma das histórias mais intensas do Batman.", imagem: "piada-mortal-vitrine.jpg" },
-      { titulo: "O Cavaleiro das Trevas", descricao: "Batman volta da aposentadoria para enfrentar um mundo em ruínas e o Superman.", imagem: "capa_cavaleiro-das-trevas.jpg" },
-      { titulo: "Batman: Silêncio", descricao: "Mistério e traição marcam a chegada de Hush, um novo inimigo de Gotham.", imagem: "batman hush.jpg" },
-      { titulo: "Watchmen", descricao: "Heróis questionam a moral e o poder — um clássico de Alan Moore.", imagem: "Watchmen.jpg" },
-      { titulo: "Batman: Ano Um", descricao: "A origem definitiva do Cavaleiro das Trevas e sua primeira luta contra o crime.", imagem: "batman-ano-um.jpg" },
-      { titulo: "Flashpoint", descricao: "Barry Allen muda o tempo e cria uma realidade onde Thomas Wayne é o Batman.", imagem: "flash_flashpoint_quadrinho_conheca__64b6520m8.jpg" },
-      { titulo: "Justiça", descricao: "Heróis e vilões unem forças para enfrentar uma ameaça cósmica ao planeta.", imagem: "justice_dc_capa.jpg" },
-      { titulo: "Crise nas Infinitas Terras", descricao: "Um evento épico que redefine o multiverso DC e suas realidades paralelas.", imagem: "crise-nas-infinitas-terras.jpg" },
-      { titulo: "Batman: Vitória Sombria", descricao: "Batman enfrenta uma nova onda de crimes em Gotham enquanto lida com seus próprios demônios.", imagem: "batman-vitoria-sombria.jpg" },
-      { titulo: "Superman: Red Son", descricao: "E se o Superman tivesse caído na União Soviética em vez dos EUA?", imagem: "superman-red-son.jpg" }
-    ];
-
-   
-    const detalhesExtras = [
-      { ano: 1988, autor: "Alan Moore", arte: "Brian Bolland", local: "Gotham City", vilao: "Coringa" },
-      { ano: 1986, autor: "Frank Miller", arte: "Klaus Janson", local: "Gotham City", vilao: "Superman" },
-      { ano: 2002, autor: "Jeph Loeb", arte: "Jim Lee", local: "Gotham City", vilao: "Hush" },
-      { ano: 1987, autor: "Alan Moore", arte: "Dave Gibbons", local: "Nova York", vilao: "Ozymandias" },
-      { ano: 1987, autor: "Frank Miller", arte: "David Mazzucchelli", local: "Gotham City", vilao: "Carmine Falcone" },
-      { ano: 2011, autor: "Geoff Johns", arte: "Andy Kubert", local: "Universo Ponto de Ignição", vilao: "Flash Reverso" },
-      { ano: 2005, autor: "Alex Ross", arte: "Doug Braithwaite", local: "Planeta Terra", vilao: "Lex Luthor" },
-      { ano: 1985, autor: "Marv Wolfman", arte: "George Pérez", local: "Multiverso DC", vilao: "Antimonitor" },
-      { ano: 1999, autor: "Jeph Loeb", arte: "Tim Sale", local: "Gotham City", vilao: "Duas-Caras" },
-      { ano: 2003, autor: "Mark Millar", arte: "Dave Johnson", local: "União Soviética", vilao: "Lex Luthor" }
-    ];
-
-    // Pega o ID do quadrinho
     const params = new URLSearchParams(window.location.search);
-    const id = parseInt(params.get("id"));
+    const id = params.get("id");
 
-    if (!isNaN(id) && quadrinhos[id]) {
-      const q = quadrinhos[id];
-      const d = detalhesExtras[id];
+    async function carregarDetalhes() {
+      try {
+        const resposta = await fetch(`http://localhost:3000/quadrinhos/${id}`);
+        if (!resposta.ok) throw new Error("Quadrinho não encontrado.");
+        const q = await resposta.json();
 
-      // Preenche os dados
-      document.getElementById("imgQuadrinho").src = q.imagem;
-      document.getElementById("imgQuadrinho").alt = q.titulo;
-      document.getElementById("tituloQuadrinho").textContent = q.titulo;
-      document.getElementById("descricaoQuadrinho").textContent = q.descricao;
-      document.getElementById("anoQuadrinho").textContent = d.ano;
-      document.getElementById("autorQuadrinho").textContent = d.autor;
-      document.getElementById("arteQuadrinho").textContent = d.arte;
-      document.getElementById("localQuadrinho").textContent = d.local;
-      document.getElementById("vilaoQuadrinho").textContent = d.vilao;
-
-      // Galeria secundária
-      const fotos = document.getElementById("fotosQuadrinho");
-      for (let i = 1; i <= 4; i++) {
-        const col = document.createElement("div");
-        col.classList.add("col-md-3");
-        col.innerHTML = `
-          <div class="card bg-black border border-warning h-100">
-            <img src="${q.imagem}" class="card-img-top" alt="${q.titulo} - imagem ${i}">
-            <div class="card-body text-center">
-              <p class="text-light small">Cena ${i}</p>
+        document.getElementById("conteudo").innerHTML = `
+          <div class="row align-items-center">
+            <div class="col-md-5 text-center">
+              <img src="${q.imagem}" class="img-fluid rounded shadow-lg border border-warning" alt="${q.titulo}">
             </div>
-          </div>`;
-        fotos.appendChild(col);
+
+            <div class="col-md-7">
+              <h1 class="text-warning mb-3">${q.titulo}</h1>
+              <p class="lead">${q.descricao}</p>
+              <ul class="list-group list-group-flush bg-transparent">
+                <li class="list-group-item bg-transparent text-light border-warning"><strong>Ano:</strong> ${q.ano || "Desconhecido"}</li>
+                <li class="list-group-item bg-transparent text-light border-warning"><strong>Autor:</strong> ${q.autor || "Desconhecido"}</li>
+                <li class="list-group-item bg-transparent text-light border-warning"><strong>Arte:</strong> ${q.arte || "Desconhecida"}</li>
+                <li class="list-group-item bg-transparent text-light border-warning"><strong>Local:</strong> ${q.local || "Desconhecido"}</li>
+                <li class="list-group-item bg-transparent text-light border-warning"><strong>Vilão:</strong> ${q.vilao || "Desconhecido"}</li>
+              </ul>
+              <div class="mt-4 d-flex gap-2">
+                <a href="index.html" class="btn btn-warning">⬅ Voltar</a>
+                <button class="btn btn-outline-warning" onclick="editarQuadrinho(${q.id})">✏️ Editar</button>
+                <button class="btn btn-outline-danger" onclick="deletarQuadrinho(${q.id})">🗑 Excluir</button>
+              </div>
+            </div>
+          </div>
+        `;
+      } catch (erro) {
+        document.getElementById("conteudo").innerHTML = `
+          <div class="text-center text-warning mt-5">
+            <h1>${erro.message}</h1>
+            <a href="index.html" class="btn btn-warning mt-3">Voltar</a>
+          </div>
+        `;
       }
-    } else {
-      document.body.innerHTML = "<div class='text-center mt-5 text-warning'><h1>Quadrinho não encontrado 🦇</h1><a href='index.html' class='btn btn-warning mt-3'>Voltar</a></div>";
     }
+
+    async function deletarQuadrinho(id) {
+      if (!confirm("Tem certeza que deseja excluir este quadrinho?")) return;
+      await fetch(`http://localhost:3000/quadrinhos/${id}`, { method: "DELETE" });
+      alert("Quadrinho excluído com sucesso!");
+      window.location.href = "index.html";
+    }
+
+    async function editarQuadrinho(id) {
+      const novoTitulo = prompt("Novo título:");
+      if (!novoTitulo) return;
+      await fetch(`http://localhost:3000/quadrinhos/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ titulo: novoTitulo })
+      });
+      alert("Quadrinho atualizado!");
+      carregarDetalhes();
+    }
+
+    carregarDetalhes();
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

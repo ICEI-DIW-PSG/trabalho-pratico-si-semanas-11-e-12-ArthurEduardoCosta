@@ -6,20 +6,20 @@ Para esse projeto, além de mudarmos o JSON para o JSON Server, vamos permitir o
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Arthur Eduardo de Oliveira Costa
+- Matricula: 902839
+- Proposta de projeto escolhida: Site sobre super herois da DC
+- Breve descrição sobre seu projeto: Meu site deveria mostrar e falar um pouco sobre algumas histórias em quadrinhos da DC
 
 **Print dos testes da API com Postman ou similar**
 
-<< COLOQUE A IMAGEM GET AQUI >> 
+<< COLOQUE A IMAGEM GET AQUI >> ![alt text](<Que dor de cabeça1-1.png>)
 
-<< COLOQUE A IMAGEM POST AQUI >>
+<< COLOQUE A IMAGEM POST AQUI >> ![alt text](<Dor de cabeça 4-1.png>)
 
-<< COLOQUE A IMAGEM PUT AQUI >>
+<< COLOQUE A IMAGEM PUT AQUI >> ![alt text](<Dor de cabeça 5-1.png>)
 
-<< COLOQUE A IMAGEM DELETE AQUI >>
+<< COLOQUE A IMAGEM DELETE AQUI >> 
 
 **Print da aba NETWORK com requisições Fetch/XHR POST e GET**
 

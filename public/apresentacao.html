@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apresentação dos Dados - DC Comics</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning sticky-top">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="index.html">🦇 DC Comics</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#quadrinhos">Quadrinhos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="apresentacao.html">📊 Apresentação</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#sobre">Sobre</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="text-center py-5 bg-black border-bottom border-warning">
+    <h1 class="text-warning display-5">📊 Análise dos Quadrinhos</h1>
+    <p class="lead">Visualização dinâmica dos dados cadastrados no sistema</p>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <div class="container my-5">
+    <h2 class="text-warning mb-4 text-center">Quantidade de Quadrinhos por Ano</h2>
+
+    <div class="card bg-black border border-warning p-4 shadow">
+      <canvas id="graficoBarras" height="120"></canvas>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 bg-dark text-secondary border-top border-warning">
+    <p>DC Comics © 2025 — Visualização criada para fins acadêmicos</p>
+  </footer>
+
+  <!-- SCRIPT DO GRÁFICO -->
+  <script>
+    const API_URL = "http://localhost:3000/quadrinhos";
+
+    async function carregarDados() {
+      const res = await fetch(API_URL);
+      const quadrinhos = await res.json();
+
+      // Agrupar por ano
+      const contagemPorAno = {};
+
+      quadrinhos.forEach(q => {
+        if (!contagemPorAno[q.ano]) {
+          contagemPorAno[q.ano] = 0;
+        }
+        contagemPorAno[q.ano]++;
+      });
+
+      // Preparar dados para o Chart.js
+      const anos = Object.keys(contagemPorAno);
+      const quantidades = Object.values(contagemPorAno);
+
+      criarGrafico(anos, quantidades);
+    }
+
+    function criarGrafico(anos, quantidades) {
+      const ctx = document.getElementById("graficoBarras").getContext("2d");
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: anos,
+          datasets: [{
+            label: "Quantidade de quadrinhos",
+            data: quantidades,
+            borderColor: "yellow",
+            backgroundColor: "rgba(255, 193, 7, 0.6)",
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              labels: { color: "white" }
+            }
+          },
+          scales: {
+            x: {
+              ticks: { color: "white" }
+            },
+            y: {
+              ticks: { color: "white" },
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    carregarDados();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

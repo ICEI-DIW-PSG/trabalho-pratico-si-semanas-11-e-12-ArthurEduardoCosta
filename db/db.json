@@ -1,7 +1,7 @@
 {
   "quadrinhos": [
     {
-      "id": 1,
+      "id": "1",
       "titulo": "Batman: A Piada Mortal",
       "ano": 1988,
       "autor": "Alan Moore, Brian Bolland",
@@ -16,7 +16,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "titulo": "O Cavaleiro das Trevas",
       "ano": 1986,
       "autor": "Frank Miller",
@@ -31,8 +31,8 @@
       ]
     },
     {
-      "id": 3,
-      "titulo": "Batman: Silêncio",
+      "id": "3",
+      "titulo": "Vitor",
       "ano": 2002,
       "autor": "Jeph Loeb, Jim Lee",
       "editora": "DC Comics",
@@ -46,8 +46,8 @@
       ]
     },
     {
-      "id": 4,
-      "titulo": "Watchmen",
+      "id": "4",
+      "titulo": "Pedrão",
       "ano": 1986,
       "autor": "Alan Moore, Dave Gibbons",
       "editora": "DC Comics",
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "titulo": "Batman: Ano Um",
       "ano": 1987,
       "autor": "Frank Miller, David Mazzucchelli",
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "titulo": "Flashpoint",
       "ano": 2011,
       "autor": "Geoff Johns, Andy Kubert",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "titulo": "Justice",
       "ano": 2005,
       "autor": "Alex Ross, Jim Krueger",
@@ -106,9 +106,9 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "titulo": "batman vitória sombria",
-      "ano": "1996",  
+      "ano": "1996",
       "autor": "Jeph Loeb, Tim Sale",
       "editora": "DC Comics",
       "personagens": "Batman, Robin, Jim Gordon, Mulher gato, Duas Caras",
@@ -118,20 +118,17 @@
         "batman-vitoria-sombria.jpg",
         "batman-vitoria-sombria.jpg",
         "batman-vitoria-sombria.jpg"
-        
-        
-        
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "titulo": "Crise nas Infinitas Terras",
       "ano": 1985,
       "autor": "Marv Wolfman, George Pérez",
       "editora": "DC Comics",
       "personagens": "Superman, Flash, Mulher-Maravilha, Batman",
       "descricao": "Um evento épico que redefiniu o multiverso da DC, unindo realidades e encerrando linhas do tempo antigas.",
-      "imagem": "crise-infinitas-terras.jpg",
+      "imagem": "crise-nas-infinitas-terras.jpg",
       "fotos": [
         "crise-1.jpg",
         "crise-2.jpg",
@@ -139,11 +136,11 @@
       ]
     },
     {
-      "id": 10,
-      "titulo": "Superman Red Son",
+      "id": "10",
+      "titulo": "Arthur",
       "ano": 2001,
       "autor": "Mark Millar, Dave Johson",
-      "editora":"DC Comics",
+      "editora": "DC Comics",
       "personagens": "Superman, Lex Luthor, Batman, Mulher maravilha",
       "descricao": "E se o Superman tivesse caído na União Soviética em vez dos Estados Unidos? Uma visão alternativa do icônico herói.",
       "imagem": "Superman-Red-Son.jpg",

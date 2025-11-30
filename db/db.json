@@ -1,4 +1,24 @@
 {
+  "usuarios": [
+    {
+      "id": "admin",
+      "nome": "Bruce Wayne",
+      "email": "admin@teste.com",
+      "senha": "123"
+    }
+  ],
+  "favoritos": [
+    {
+      "usuarioId": "j0MEz4j",
+      "quadrinhoId": "2",
+      "id": 1
+    },
+    {
+      "usuarioId": "j0MEz4j",
+      "quadrinhoId": "6",
+      "id": 2
+    }
+  ],
   "quadrinhos": [
     {
       "id": "1",
@@ -137,7 +157,7 @@
     },
     {
       "id": "10",
-      "titulo": "Arthur",
+      "titulo": "Super man Red Son",
       "ano": 2001,
       "autor": "Mark Millar, Dave Johson",
       "editora": "DC Comics",

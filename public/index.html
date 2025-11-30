@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quadrinhos da DC - Tema Batman</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-dark text-light">
 
-  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning sticky-top">
     <div class="container">
       <a class="navbar-brand text-warning fw-bold" href="#">🦇 DC Comics</a>
@@ -18,22 +18,56 @@
       </button>
 
       <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
+        <li class="nav-item d-none" id="nav-favoritos">
+  <a class="nav-link text-warning" href="favoritos.html">⭐ Favoritos</a>
+</li>
+<li class="nav-item d-none" id="nav-cadastro-item">
+  <a class="nav-link fw-bold text-success" href="cadastro-item.html">➕ Novo Item</a>
+</li>
+        <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item"><a class="nav-link" href="#quadrinhos">Quadrinhos</a></li>
           <li class="nav-item"><a class="nav-link" href="apresentacao.html">📊 Apresentação</a></li>
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+
+          <div id="menu-deslogado" class="d-flex ms-lg-3">
+            <li class="nav-item">
+              <a class="btn btn-outline-warning btn-sm mt-1 mt-lg-0 me-2" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-warning btn-sm mt-1 mt-lg-0 text-dark fw-bold" href="cadastro.html">Cadastre-se</a>
+            </li>
+          </div>
+
+          <div id="menu-logado" class="d-flex ms-lg-3 align-items-center d-none">
+            <span id="nomeUsuario" class="text-light me-3 fw-bold"></span>
+            <button class="btn btn-danger btn-sm" onclick="fazerLogout()">Sair</button>
+          </div>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HEADER -->
   <header class="text-center py-5 bg-black text-light">
     <h1 class="text-warning display-5">Quadrinhos Icônicos da DC</h1>
     <p class="lead">As histórias que moldaram o universo — com destaque para o Cavaleiro das Trevas!</p>
   </header>
 
-  <!-- LISTA DE QUADRINHOS -->
+  <section id="destaques" class="container my-5">
+    <h2 class="text-warning mb-4 text-center">Destaques da Coleção</h2>
+    <div id="carouselHero" class="carousel slide border border-warning shadow" data-bs-ride="carousel">
+      <div class="carousel-inner bg-black" id="carousel-conteudo" style="height: 500px;">
+        </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselHero" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+  </section>
+
   <section id="quadrinhos" class="container my-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h2 class="text-warning">Quadrinhos Lendários</h2>
@@ -42,7 +76,6 @@
     <div class="row g-4" id="listaQuadrinhos"></div>
   </section>
 
-  <!-- MODAL NOVO QUADRINHO -->
   <div class="modal fade" id="modalNovo" tabindex="-1" aria-labelledby="modalNovoLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content bg-dark text-light border border-warning">
@@ -51,44 +84,81 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-
           <form id="formNovoQuadrinho">
             <div class="mb-3">
               <label class="form-label text-warning">Título</label>
               <input type="text" class="form-control bg-black text-light border-warning" id="titulo" required>
             </div>
-
             <div class="mb-3">
               <label class="form-label text-warning">Descrição</label>
               <textarea class="form-control bg-black text-light border-warning" id="descricao" required></textarea>
             </div>
-
             <div class="mb-3">
               <label class="form-label text-warning">Imagem (URL ou nome do arquivo)</label>
               <input type="text" class="form-control bg-black text-light border-warning" id="imagem" required>
             </div>
-
             <div class="text-end">
               <button type="submit" class="btn btn-warning">Salvar</button>
             </div>
           </form>
-
         </div>
       </div>
     </div>
   </div>
 
-  <!-- SOBRE -->
   <section id="sobre" class="bg-black text-light py-5 border-top border-warning">
-    <div class="container text-center">
-      <h2 class="text-warning mb-4">Sobre o Projeto</h2>
-      <p>Trabalho prático de Desenvolvimento Web — Tema: Quadrinhos da DC Comics.</p>
-      <p><strong>Aluno:</strong> Arthur Eduardo de Oliveira Costa<br>
-         <strong>Curso:</strong> Sistemas de Informação — PUC Minas</p>
+    <div class="container">
+      
+      <h3 class="fw-bold mb-4 pb-2 border-bottom border-secondary">Informações do(a) Aluno(a)</h3>
+
+      <div class="row g-4">
+        
+        <div class="col-md-5">
+          <h5 class="text-warning fw-bold mb-3">Autoria do Trabalho</h5>
+          <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+              <i class="bi bi-person-circle text-secondary" style="font-size: 4rem;"></i>
+            </div>
+            <div class="flex-grow-1 ms-3">
+              <p class="mb-1"><strong>Aluno:</strong> Arthur Eduardo de O. Costa</p>
+              <p class="mb-1"><strong>Curso:</strong> Sistemas de Informação</p>
+              <p class="mb-0"><strong>Turma:</strong> PUC Minas</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <h5 class="text-warning fw-bold mb-3">Sobre</h5>
+          <p class="text-secondary mb-1">
+            Trabalho prático de Desenvolvimento Web — Tema: Quadrinhos da DC Comics.
+          </p>
+          <div class="progress mb-2" style="height: 6px; opacity: 0.2;">
+            <div class="progress-bar bg-light" style="width: 100%"></div>
+          </div>
+          <div class="progress mb-2" style="height: 6px; opacity: 0.2;">
+            <div class="progress-bar bg-light" style="width: 80%"></div>
+          </div>
+        </div>
+
+        <div class="col-md-2 text-md-end">
+          <h5 class="text-warning fw-bold mb-3">Redes Sociais</h5>
+          <div class="d-flex flex-column gap-2 align-items-md-end">
+            <a href="#" class="text-decoration-none text-secondary hover-warning">
+              <i class="bi bi-facebook fs-4"></i>
+            </a>
+            <a href="#" class="text-decoration-none text-secondary hover-warning">
+              <i class="bi bi-twitter-x fs-4"></i>
+            </a>
+            <a href="#" class="text-decoration-none text-secondary hover-warning">
+              <i class="bi bi-instagram fs-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- RODAPÉ -->
   <footer class="text-center py-4 bg-dark text-secondary border-top border-warning">
     <p>Feito por um fã que quer tirar uma nota boa — DC Comics © 2025</p>
   </footer>
